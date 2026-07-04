@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>EggTrack - Register Flock</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🥚 EggTrack</h1>
+    <p class="subtitle">AI-Powered Poultry Farm Advisor</p>
+
+    <div class="card">
+      <h2>Register a New Flock</h2>
+      <form id="flockForm">
+        <label>Flock Name</label>
+        <input type="text" id="flock_name" required placeholder="e.g., Shed A">
+
+        <label>Breed</label>
+        <input type="text" id="breed" required placeholder="e.g., Lohmann Brown">
+
+        <label>Number of Birds</label>
+        <input type="number" id="bird_count" required placeholder="e.g., 5000">
+
+        <label>Hatch Date</label>
+        <input type="date" id="hatch_date" required>
+
+        <label>Housing Type</label>
+        <select id="housing_type">
+          <option value="cage">Cage</option>
+          <option value="free-range">Free-range</option>
+          <option value="deep-litter">Deep Litter</option>
+        </select>
+
+        <button type="submit">Register Flock</button>
+      </form>
+    </div>
+
+    <div class="nav-links">
+      <a href="dashboard.html">View All Flocks →</a>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

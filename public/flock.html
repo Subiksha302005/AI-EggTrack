@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>EggTrack - Flock Details</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🥚 EggTrack</h1>
+    <div id="flockInfo" class="card">Loading flock info...</div>
+
+    <div class="card">
+      <h2>Stage Advisory</h2>
+      <button id="generateAdvisoryBtn">Generate AI Advisory</button>
+      <div id="advisoryResult"></div>
+    </div>
+
+    <div class="card">
+      <h2>Log Daily Production</h2>
+      <form id="productionForm">
+        <label>Date</label>
+        <input type="date" id="log_date" required>
+        <label>Eggs Collected</label>
+        <input type="number" id="eggs_collected" required placeholder="e.g., 4300">
+        <label>Mortality Count</label>
+        <input type="number" id="mortality_count" value="0">
+        <label>Feed Consumed (kg)</label>
+        <input type="number" step="0.1" id="feed_consumed_kg" placeholder="e.g., 250">
+        <button type="submit">Log Production</button>
+      </form>
+    </div>
+
+    <div class="card">
+      <h2>Report a Symptom / Issue</h2>
+      <form id="diagnoseForm">
+        <label>Describe what you're seeing</label>
+        <textarea id="symptoms" rows="3" required placeholder="e.g., production dropped from 85% to 60% this week, some birds lethargic"></textarea>
+        <button type="submit">Get AI Diagnosis</button>
+      </form>
+      <div id="diagnosisResult"></div>
+    </div>
+
+    <div class="nav-links">
+      <a href="dashboard.html">← Back to All Flocks</a>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
